@@ -6,12 +6,15 @@
  */
 
 const https = require('https');
+const path = require('path');
+
+const TEMPLATE_PATH = path.join(__dirname, 'templates');
 
 /**
  * Generate AI-powered summary using MiniMax API
  * @param {Object} meeting - Meeting object
  * @param {Object} context - Aggregated context
- * @returns {string} AI-generated summary
+ * @returns {string|null} AI-generated summary or null on error
  */
 async function generateAISummary(meeting, context) {
     const apiKey = process.env.MINIMAX_API_KEY;
@@ -40,7 +43,7 @@ Erstelle eine kurze, hilfreiche Zusammenfassung mit:
 
 Antworte auf Deutsch, maximal 150 Wörter, strukturiert als Liste.`};
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const data = JSON.stringify({
             model: 'minimax/MiniMax-M2.1',
             messages: [
@@ -57,7 +60,8 @@ Antworte auf Deutsch, maximal 150 Wörter, strukturiert als Liste.`};
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${apiKey}`
-            }
+            },
+            timeout: 15000
         };
 
         const req = https.request(options, (res) => {
@@ -69,18 +73,64 @@ Antworte auf Deutsch, maximal 150 Wörter, strukturiert als Liste.`};
                     if (parsed.choices?.[0]?.message?.content) {
                         resolve(parsed.choices[0].message.content);
                     } else {
+                        console.log('   ⚠️  AI API returned unexpected response format');
                         resolve(null);
                     }
                 } catch (e) {
+                    console.log('   ⚠️  Failed to parse AI response');
                     resolve(null);
                 }
             });
         });
 
-        req.on('error', () => resolve(null));
+        req.on('error', (error) => {
+            console.log(`   ⚠️  AI API request failed: ${error.message}`);
+            resolve(null);
+        });
+        
+        req.on('timeout', () => {
+            req.destroy();
+            console.log('   ⚠️  AI API request timed out');
+            resolve(null);
+        });
+
         req.write(data);
         req.end();
     });
+}
+
+/**
+ * Generate template fallback summary
+ * @param {Object} meeting - Meeting object
+ * @param {Object} context - Aggregated context
+ * @returns {string} Template-based summary
+ */
+function generateTemplateFallback(meeting, context) {
+    const lines = [];
+    
+    lines.push(`**🎯 Meeting-Ziel:**`);
+    lines.push('- Kläre das Hauptziel des Meetings');
+    lines.push('');
+    
+    lines.push(`**📋 Vorbereitungs-Punkte:**`);
+    lines.push(`- [ ] Agenda-Punkte durchgehen`);
+    if (context.emails && context.emails.length > 0) {
+        lines.push(`- [ ] ${context.emails[0].subject} vorbereiten`);
+    }
+    if (meeting.location && meeting.location !== 'TBD') {
+        lines.push(`- [ ] Location/Link prüfen: ${meeting.location}`);
+    }
+    lines.push('');
+    
+    lines.push(`**💡 Kontext:**`);
+    if (context.searchQuery) {
+        lines.push(`- Zugehöriges Thema: "${context.searchQuery}"`);
+    }
+    if (context.emails && context.emails.length > 0) {
+        lines.push(`- ${context.emails.length} zugehörige Email(s) gefunden`);
+    }
+    
+    return lines.join('\n');
 }
 
 /**
@@ -117,12 +167,21 @@ async function generateBriefing(meeting, context, format = 'brief') {
     // AI Summary (if available)
     if (process.env.USE_AI !== 'false') {
         lines.push('### 🤖 AI Zusammenfassung');
-        const aiSummary = await generateAISummary(meeting, context);
-        if (aiSummary) {
-            lines.push(aiSummary);
-        } else {
-            lines.push('_AI nicht verfügbar (kein API Key)_');
+        try {
+            const aiSummary = await generateAISummary(meeting, context);
+            if (aiSummary) {
+                lines.push(aiSummary);
+            } else {
+                lines.push(generateTemplateFallback(meeting, context));
+            }
+        } catch (error) {
+            console.log(`   ⚠️  Error in AI generation: ${error.message}`);
+            lines.push(generateTemplateFallback(meeting, context));
         }
+        lines.push('');
+    } else {
+        lines.push('### 📋 Vorbereitung');
+        lines.push(generateTemplateFallback(meeting, context));
         lines.push('');
     }
     
@@ -138,11 +197,11 @@ async function generateBriefing(meeting, context, format = 'brief') {
     }
     lines.push('');
     
-    // Quick Prep Points (Template fallback)
+    // Quick Prep Points
     lines.push('### 🎯 Prep-Punkte');
     lines.push('- [ ] Meeting-Ziel klären');
     lines.push('- [ ] Agenda-Punkte vorbereiten');
-    if (context.emails && context.emails.length > 0) {
+    if (context.emails && context.emails.length > 0 && context.emails[0].subject) {
         lines.push(`- [ ] ${context.emails[0].subject} ansprechen`);
     }
     if (context.searchQuery) {
