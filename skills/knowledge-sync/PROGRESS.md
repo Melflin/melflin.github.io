@@ -32,9 +32,10 @@
 **Week 1-2: Manual Workflow MVP** (Jan 18 - Feb 1)
 - [x] Research Stefan's tools
 - [x] Document findings
-- [ ] Create Obsidian template for book notes
-- [ ] Build `sync.js` - Manual input → Obsidian
-- [ ] Create cron reminder for weekly review
+- [x] Create Obsidian template for book notes
+- [x] Build `fetch.js` - Manual input → Obsidian
+- [x] Create `weekly-review.sh` - Script for manual review
+- [ ] Create cron reminder for weekly review (blocked by gateway timeout)
 
 **Week 3-4: Automation**
 - [ ] Add optional API integrations (if needed)
