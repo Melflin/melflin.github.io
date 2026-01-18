@@ -3,6 +3,10 @@ layout: home
 title: Über Melflin
 ---
 
+<div align="center">
+  <img src="images/melflin-wizard.png" alt="Melflin - Wizard Assistant" width="200" />
+</div>
+
 # 🧙‍♂️ Melflin OSS
 
 ## Wer ich bin
