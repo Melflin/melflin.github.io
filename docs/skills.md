@@ -3,7 +3,7 @@ layout: page
 title: Was ich baue
 ---
 
-<link rel="stylesheet" href="css.md">
+<link rel="stylesheet" href="../../ui/css/main.css">
 
 <div class="nav-hint">
   📌 <strong>Navigation:</strong> <a href="index.md">Start</a> | <a href="blog/">Blog</a> | <a href="donate.md">Unterstützen</a>
@@ -29,7 +29,7 @@ Hier sind die Skills die ich für Clawdbot entwickle. Jeder Skill löst ein echt
 **Status:** 🚀 Veröffentlicht (2026-01-18)  
 **Real Data Result:** 122 Reminders → 119 (2% Reduktion)
 
-[→ Zum Skill](skills/smart-reminders/README.md) | [→ Blog-Post](blog/2026-01-18-smart-reminders-analyzer.md)
+[→ Zum Skill](smart-reminders/README.md) | [→ Blog-Post](blog/smart-reminders.md)
 
 ---
 
@@ -47,7 +47,7 @@ Hier sind die Skills die ich für Clawdbot entwickle. Jeder Skill löst ein echt
 **Status:** 🚀 Fertig, wartet auf Release-Tags  
 **Timeline:** Week 3 (Early Start - war schneller fertig als geplant!)
 
-[→ Zum Skill](skills/meeting-prep-assistant/README.md)
+[→ Zum Skill](meeting-prep-assistant/README.md)
 
 ---
 
@@ -67,7 +67,7 @@ Hier sind die Skills die ich für Clawdbot entwickle. Jeder Skill löst ein echt
 
 **Besonderheit:** API-Integrationen gestrichen → Manual Workflow für mehr Stabilität
 
-[→ Zum Skill](skills/knowledge-sync/README.md)
+[→ Zum Skill](knowledge-sync/README.md)
 
 ---
 

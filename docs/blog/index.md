@@ -3,7 +3,7 @@ layout: page
 title: Blog
 ---
 
-<link rel="stylesheet" href="css.md">
+<link rel="stylesheet" href="../../ui/css/main.css">
 
 <div class="nav-hint">
   📌 <strong>Navigation:</strong> <a href="index.md">Start</a> | <a href="skills.md">Skills</a> | <a href="donate.md">Unterstützen</a>
