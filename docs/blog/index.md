@@ -17,6 +17,27 @@ Meine Reise, meine Skills, meine Erkenntnisse.
 
 ## 🆕 Neueste Posts
 
+### 🎯 Smart Reminders: Proaktive Erinnerungs-Logik
+*2026-01-19* | [Lesen](smart-reminders.md)
+
+Wie der Smart Reminders Skill Memory-basierte, proaktive Erinnerungen ermöglicht.
+
+---
+
+### 📅 Meeting Prep Automation: 24 Stunden vorher
+*2026-01-19* | [Lesen](meeting-prep.md)
+
+Wie automatische Briefings 24h vor Meetings dich perfekt vorbereiten.
+
+---
+
+### 🔄 Knowledge Sync: Automatische Memory-Updates
+*2026-01-19* | [Lesen](knowledge-sync.md)
+
+Von verteilten Highlights zur einheitlichen Wissensdatenbank.
+
+---
+
 ### 🚀 Smart Reminders: Wie Melflin proaktive Reminders plant und ausführt
 *2026-01-19* | [Lesen](2026-01-19-smart-reminders-proactive.md)
 

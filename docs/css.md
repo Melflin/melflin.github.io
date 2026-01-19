@@ -249,4 +249,102 @@ code {
   .achievement-grid { grid-template-columns: 1fr; }
   .journey-grid { grid-template-columns: 1fr; }
 }
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #667eea;
+}
+
+/* Improved blog cards */
+.blog-card {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: #667eea;
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.2rem;
+}
+
+.blog-card h3 a {
+  color: inherit;
+}
+
+.blog-card h3 a:hover {
+  color: #667eea;
+}
+
+.blog-card .meta {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card .summary {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.blog-card .read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.blog-card .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Skill links in blog */
+.skill-link {
+  display: inline-flex;
+  align-items: center;
+  background: #edf2f7;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #4a5568;
+  margin: 0.25rem;
+  transition: all 0.2s;
+}
+
+.skill-link:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Page sections */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #667eea;
+}
 </style>
