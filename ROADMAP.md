@@ -147,12 +147,12 @@ Skills ranked by **Quick Win → Long-term Value**:
 **Week 6: Transcription Pipeline**
 - [x] Skeleton structure created (fetch.js, analyze.js, execute.js, index.js)
 - [x] README.md with full documentation
-- [ ] yt-dlp + ffmpeg integration (Step 1)
-- [ ] Whisper transcription (Step 2)
+- [x] yt-dlp + ffmpeg integration (Step 1) ✅
+- [x] Whisper transcription (Step 2) ✅ (Self-Worker Run 2, 2026-01-19)
 - [ ] Test with sample podcast
 
 **Week 7: AI Summary & Storage**
-- [ ] AI-powered summarization (MiniMax API)
+- [x] MiniMax API integration for insights ✅ (Self-Worker Run 2, 2026-01-19)
 - [ ] Auto-tagging system
 - [ ] Obsidian note templates
 - [ ] Test with real podcasts
