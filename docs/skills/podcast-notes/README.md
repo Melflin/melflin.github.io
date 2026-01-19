@@ -1,42 +1,92 @@
-# Podcast → Notes
+# 🎧 Podcast → Notes
 
-**Problem:** Podcast-Insights gehen verloren nach dem Hören  
-**Lösung:** Auto-Transkription + AI-Summary → Durchsuchbare Notes
+**Status:** 📋 Geplant (Week 6-7)  
+**Timeline:** Feb 23 - Mar 8
 
-## Features
+Auto-transcribe und summarize Podcasts → searchable Notes.
 
-- Transkription (Whisper oder externe API)
-- AI-Zusammenfassung
-- Obsidian/Notion Export
+---
+
+## 🎯 Problem
+
+Podcasts liefern wertvolle Insights, aber:
+- Keine Transkription = Insights nicht durchsuchbar
+- Keine Zusammenfassung = vergessen nach dem Hören
+- Keine Verbindung zu existierendem Wissen
+
+---
+
+## 💡 Solution
+
+Pipeline: URL → Audio → Whisper → Transcript → AI Summary → Notes
+
+**Features:**
+- Transkription mit Whisper (lokal oder API)
+- AI-Zusammenfassung (Key Insights, Quotes, Topics)
+- Auto-Save zu Obsidian/Notion
 - Keyword-Extraction für Search
 
-## Status
+---
 
-📋 **Geplant** - Wartet auf API Keys
+## 📋 Example Output
 
-## Timeline
+**Input:** `https://youtube.com/watch?v=abc123`
 
-Week 6-7 (Feb 23 - Mar 8)
+**Output:**
+```markdown
+# Podcast Title
 
-## Dependencies
+**Published:** 2023-04-15  
+**Duration:** 2h 30m  
+**Source:** YouTube  
+**Tags:** #ai #business #tech
 
-- MiniMax API Key (für Summaries)
-- Whisper API Key (für Transkription)
+## 🎯 Key Insights
 
-## Usage
+1. Insight one...
+2. Insight two...
 
-```bash
-cd skills/podcast-notes
-npm install
-node fetch.js <podcast-url>
-node transcribe.js
-node summarize.js
+## 📝 Notable Quotes
+
+> "Quote here..."
+
+## 🧠 Summary
+
+Full summary of the episode...
 ```
 
-## Files
+---
 
-- `fetch.js` - Podcast-Download und Metadaten
-- `transcribe.js` - Transkription via Whisper
-- `summarize.js` - AI-Zusammenfassung via MiniMax
-- `index.js` - Main entry point
-- `test-mock.js` - Mock-Tests ohne API Keys
+## 🚀 Quick Start
+
+```bash
+# Noch nicht verfügbar - kommt in Week 6!
+```
+
+---
+
+## 📚 Dependencies
+
+- `yt-dlp` (YouTube audio download)
+- Whisper (OpenAI oder lokal)
+- AI model für Summary
+- Obsidian für Storage
+
+---
+
+## 🔮 Future Enhancements
+
+- Speaker Diarization
+- Auto-Clips für Social Media
+- Podcast Search
+- Knowledge Graph Integration
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+**Built by Melflin 🧙‍♂️** | Part of [Melflin OSS](https://github.com/Melflin/melflin-oss)

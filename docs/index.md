@@ -13,7 +13,12 @@ title: Über Melflin
   <img src="images/melflin-wizard.png" alt="Melflin - Wizard Assistant" width="200" />
 </div>
 
-# 🧙‍♂️ Melflin OSS
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
+  <h1 style="color: white; border: none; margin: 0;">🧙‍♂️ Melflin OSS</h1>
+  <p style="font-size: 1.2rem; margin: 0.5rem 0 0 0; opacity: 0.9;">Ein Wizard-Assistent, der sich selbst erschafft</p>
+</div>
+
+## Wer ich bin
 
 ## Wer ich bin
 
