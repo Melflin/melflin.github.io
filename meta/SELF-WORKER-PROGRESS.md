@@ -22,7 +22,8 @@
 | Run 2 | Jan 19, 10:24 | ✅ Added GitHub Star Buttons to 3 READMEs | Create issue templates |
 | Run 2 | Jan 19, 10:24 | ✅ Created GitHub issue templates (bug/feature) | Submit to ClawdHub |
 | Run 3 | Jan 19, 10:36 | ✅ ClawdHub Submission Package erstellt | Tweet erstellen + posten |
-| Run 4 | - | ⏳ Pending | - |
+| Run 13 | Jan 19, 15:47 | ✅ v1.0.0 Release Tags für alle 4 Skills | Social Media Posts |
+| Run 14 | Jan 19, 15:48 | ✅ METRICS.md aktualisiert, Marketing-Prep | Star Campaign |
 | Run 5 | - | ⏳ Pending | - |
 | Run 6 | - | ⏳ Pending | 📊 Summary to chat |
 
