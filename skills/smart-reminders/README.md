@@ -7,6 +7,10 @@ AI-powered bulk analysis and cleanup for Apple Reminders. Clean up cluttered rem
 [![macOS](https://img.shields.io/badge/macOS-12+-black?style=flat-square)](https://www.apple.com/macos/)
 [![npm](https://img.shields.io/badge/npm-v1.0.0-blue?style=flat-square)](https://npmjs.com/)
 
+## 🎬 Demo
+
+![Smart Reminders Demo](../../demo/smart-reminders-demo.gif)
+
 ## 📊 Real Results
 
 **Tested with 683 reminders (122 active):**

@@ -2,6 +2,10 @@
 
 **Auto-generated briefing for upcoming meetings**
 
+## 🎬 Demo
+
+![Meeting Prep Demo](../../demo/meeting-prep-demo.gif) *(coming soon)*
+
 ## Usage
 
 ```bash

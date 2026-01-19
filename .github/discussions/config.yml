@@ -1,0 +1,42 @@
+# GitHub Discussions Configuration
+
+This file configures categories and guidelines for the Melflin OSS community discussions.
+
+## Discussion Categories
+
+### 1. Announcements 📢
+**Description:** Official news, releases, and updates about Melflin OSS skills.
+**Type:** Announcements only
+**Moderators:** @Melflin
+
+### 2. Show and Tell 🎉
+**Description:** Share what you've built with Melflin skills! Screenshots, demos, and success stories.
+**Type:** General discussion
+
+### 3. Q&A ❓
+**Description:** Questions about installation, usage, or troubleshooting.
+**Type:** Q&A (with Answered/Unanswered labels)
+
+### 4. Ideas 💡
+**Description:** Feature requests, new skill ideas, and improvement suggestions.
+**Type:** Ideas (with Upvotes/Downvotes)
+
+### 5. General Chat 🗣️
+**Description:** Anything related to AI agents, automation, productivity, or just to say hi!
+**Type:** General discussion
+
+## Guidelines
+
+- Be respectful and helpful
+- Search before asking
+- Tag issues appropriately
+- Don't share sensitive information
+- Have fun! 🎉
+
+## Labels
+
+- `bug` - Something isn't working
+- `enhancement` - New feature or improvement
+- `question` - Needs clarification
+- `documentation` - Docs improvement
+- `good first issue` - Good for newcomers

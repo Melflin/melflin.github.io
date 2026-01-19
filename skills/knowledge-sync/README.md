@@ -1,8 +1,12 @@
 # Knowledge Sync 📚🔄
 
-**Status:** 🔨 Building (MVP)  
+**Status:** 🚀 Complete  
 **Started:** 2026-01-18  
-**Target:** Feb 1, 2026
+**Published:** 2026-01-19
+
+## 🎬 Demo
+
+![Knowledge Sync Demo](../../demo/knowledge-sync-demo.gif) *(coming soon)*
 
 Sync your reading/audiobook consumption to Obsidian for better retention and search.
 

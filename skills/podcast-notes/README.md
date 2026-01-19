@@ -2,6 +2,10 @@
 
 Transform podcasts and YouTube videos into structured Obsidian notes with AI-powered transcription and insight extraction.
 
+## 🎬 Demo
+
+![Podcast → Notes Demo](../../demo/podcast-notes-demo.gif) *(coming soon)*
+
 ## Features
 
 - 🎙️ **Audio Extraction** - Download from YouTube, Spotify, or any podcast URL
