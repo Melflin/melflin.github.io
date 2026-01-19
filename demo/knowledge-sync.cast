@@ -1,0 +1,13 @@
+{"version":3,"term":{"cols":80,"rows":24,"type":"xterm-256color"},"timestamp":1768814858,"command":"bash demo/knowledge-sync-demo.sh","title":"Knowledge Sync","env":{"SHELL":"/bin/zsh"}}
+[0.005, "o", "$ knowledge-sync add \"Atomic Habits\" \"James Clear\" \"Habit stacking: After I pour coffee, I will write 3 things I'm grateful for.\"\r\n"]
+[0.507, "o", "✅ Added to Obsidian: knowledge/books/atomic-habits-james-clear.md\r\n"]
+[0.306, "o", "\r\n$ knowledge-sync add \"Atomic Habits\" \"James Clear\" \"2-minute rule: When starting a new habit, it should take less than 2 minutes.\"\r\n"]
+[0.507, "o", "✅ Updated existing note with new insight\r\n"]
+[0.307, "o", "\r\n$ knowledge-sync list --this-month\r\n"]
+[0.507, "o", "📚 Knowledge Captured (January 2026):\r\n"]
+[0.210, "o", "├── Atomic Habits (James Clear) - 5 insights\r\n"]
+[0.211, "o", "├── Deep Work (Cal Newport) - 3 insights\r\n"]
+[0.211, "o", "├── The Mom Test (Rob Fitzpatrick) - 7 insights\r\n"]
+[0.211, "o", "└── Total: 15 insights across 3 books\r\n"]
+[0.312, "o", "\r\n$ _\r\n"]
+[0.001, "x", "0"]

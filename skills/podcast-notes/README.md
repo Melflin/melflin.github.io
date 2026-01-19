@@ -6,8 +6,7 @@ Transform podcasts and YouTube videos into structured Obsidian notes with AI-pow
 
 ## 🎬 Demo
 
-![Podcast → Notes Demo](https://github.com/melflin/melflin-oss/raw/master/skills/podcast-notes/demo-preview.png)
-*See [Complete Demo GIF](../../demo/complete-demo.gif) or [Demo Scenarios](../../marketing/demo-scenarios.md) for examples*
+![Podcast → Notes Demo](../../demo/podcast-notes.gif)
 
 ## Features
 

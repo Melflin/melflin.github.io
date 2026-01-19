@@ -8,8 +8,7 @@
 
 ## 🎬 Demo
 
-![Knowledge Sync Demo](https://github.com/melflin/melflin-oss/raw/master/skills/knowledge-sync/demo-preview.png)
-*See [Complete Demo GIF](../../demo/complete-demo.gif) or [Demo Scenarios](../../marketing/demo-scenarios.md) for examples*
+![Knowledge Sync Demo](../../demo/knowledge-sync.gif)
 
 Sync your reading/audiobook consumption to Obsidian for better retention and search.
 
