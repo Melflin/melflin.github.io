@@ -75,7 +75,23 @@
 - GitHub Stars: 0 → [Hilf mit! ⭐](https://github.com/Melflin/melflin-oss)
 - Demo scripts ready for GIF recording (asciinema compatible)
 
-**Next Steps:**
-1. Record demo GIFs using asciinema + agg
-2. Update README.md with demo GIF placeholders
-3. Prepare social media posts (Twitter/X, LinkedIn)
+---
+
+### 📅 2026-01-19 | Self-Worker Run #4
+
+**Demo-Scripts Verifizierung:**
+- ✅ demo/README.md - vorhanden
+- ✅ demo/smart-reminders.sh - ausführbar
+- ✅ demo/meeting-prep.sh - ausführbar
+- ✅ demo/knowledge-sync.sh - ausführbar
+- ✅ demo/podcast-notes.sh - ausführbar
+- ✅ demo/demo-all.sh - ausführbar
+
+**Blocker:**
+- ⚠️ asciinema/agg NICHT installiert → GIF-Generierung nicht möglich
+- ⏳ Social-Media Posts noch nicht veröffentlicht
+
+**Nächste Schritte:**
+1. Homebrew check + asciinema installieren ODER
+2. README.md mit statischen Demo-Beschreibungen erweitern (Fallback)
+3. Social-Media Campaign vorbereiten (Twitter, LinkedIn, Reddit)
