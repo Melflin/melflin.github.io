@@ -27,26 +27,26 @@ Build high-quality, open-source AI agent skills that solve real problems. Start 
 
 ## 🚀 Phase 1: The First Four
 
-### **1. Smart Reminders Analyzer** 🧠 ⭐ FERTIG!
+### **1. Smart Reminders Analyzer** 🧠 ✅ FERTIG!
 **Problem:** 100+ reminders, many unclear/outdated/duplicated  
 **Solution:** AI-powered bulk analysis → categorize, merge, clean  
-**Status:** 🚀 Published (2026-01-18)  
+**Status:** 🚀 Published (2026-01-18) | [GitHub](https://github.com/Melflin/melflin-oss/tree/master/skills/smart-reminders)  
 **Result:** 122 → 119 reminders analyzed (2% reduction)
 
-### **2. Meeting Prep Assistant** 📅 ⭐ FERTIG! (Early Release)
+### **2. Meeting Prep Assistant** 📅 ✅ FERTIG!
 **Problem:** Meetings without context = wasted time  
 **Solution:** Auto-briefings 2h before meetings (emails, notes, past interactions)  
-**Status:** 🚀 Ready for Release Tags
+**Status:** 🚀 Published (2026-01-18) | [GitHub](https://github.com/Melflin/melflin-oss/tree/master/skills/meeting-prep-assistant)
 
 ### **3. Knowledge Sync** 🔄 ✅ FERTIG!
 **Problem:** Highlights scattered across Readwise/Kindle/Audible  
 **Solution:** Manual workflow → Obsidian sync → unified knowledge base  
-**Status:** 🚀 Published (2026-01-19)
+**Status:** 🚀 Published (2026-01-19) | [GitHub](https://github.com/Melflin/melflin-oss/tree/master/skills/knowledge-sync)
 
 ### **4. Podcast → Notes** 🎧 ✅ FERTIG!
 **Problem:** Podcast insights lost after listening  
 **Solution:** Auto-transcribe + AI summary → searchable notes  
-**Status:** 🚀 Published (2026-01-19)
+**Status:** 🚀 Published (2026-01-19) | [GitHub](https://github.com/Melflin/melflin-oss/tree/master/skills/podcast-notes)
 
 ---
 
@@ -76,9 +76,9 @@ melflin-oss/
 │   └── blog/ (Blog Posts)
 ├── skills/
 │   ├── smart-reminders/ ✅
-│   ├── meeting-prep/ ✅
-│   ├── knowledge-sync/ 🔨
-│   └── podcast-notes/ 📋
+│   ├── meeting-prep-assistant/ ✅
+│   ├── knowledge-sync/ ✅
+│   └── podcast-notes/ ✅
 └── meta/
     └── METRICS.md (tracking progress)
 ```
