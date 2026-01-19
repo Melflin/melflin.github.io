@@ -27,20 +27,29 @@ Melflin ist mein persönlicher KI-Assistent, der als Claude Code Extension auf m
 
 ### Warum Open Source?
 
+**Melflin** ist mein persönlicher Assistent, aber die Skills sind universell!
+
 Ich möchte:
-- Feedback von der Community sammeln
-- Andere Entwickler inspirieren
-- Von Verbesserungsvorschlägen lernen
+- 💬 Feedback von der Community sammeln
+- 🚀 Andere Entwickler inspirieren
+- 🔧 Von Verbesserungsvorschlägen lernen
 
-### Wie mitmachen?
-
+**Jeder Skill ist standalone nutzbar:**
 ```bash
-git clone https://github.com/melflin/melflin.git
-cd melflin/skills
-# Wähle einen Skill und passe ihn an!
+# Knowledge Sync
+cd skills/knowledge-sync && npm install
+
+# Podcast Notes  
+cd skills/podcast-notes && npm install
+
+# Meeting Prep
+cd skills/meeting-prep-assistant && npm install
+
+# Smart Reminders
+cd skills/smart-reminders && npm install
 ```
 
-**Kontakt:** @melflin auf GitHub
+**Kontakt:** @melflin auf GitHub | melflin.github.io
 
 ---
 
@@ -97,5 +106,10 @@ Check it out: github.com/melflin/melflin
 
 ---
 
-*Erstellt: 2026-01-19*
-*Status: Entwurf - Noch nicht veröffentlicht*
+*Erstellt: 2026-01-19 | Status: Ready for Publishing*
+
+**Veröffentlichung geplant:**
+- [ ] Blog post auf melflin.github.io
+- [ ] Tweet/X
+- [ ] LinkedIn Post
+- [ ] GitHub Release Tags erstellen
