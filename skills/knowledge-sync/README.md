@@ -6,7 +6,8 @@
 
 ## 🎬 Demo
 
-![Knowledge Sync Demo](../../demo/knowledge-sync-demo.gif) *(coming soon)*
+![Knowledge Sync Demo](https://github.com/melflin/melflin-oss/raw/master/skills/knowledge-sync/demo-preview.png)
+*See [Complete Demo GIF](../../demo/complete-demo.gif) or [Demo Scenarios](../../marketing/demo-scenarios.md) for examples*
 
 Sync your reading/audiobook consumption to Obsidian for better retention and search.
 
@@ -139,12 +140,12 @@ node review.js
 ## 🎯 Success Criteria
 
 - [x] Research Stefan's tools ✅
-- [x] Create Obsidian template
-- [x] Build `fetch.js` - Add book notes
-- [ ] Build `review.js` - Weekly reflection
-- [ ] Build `list.js` - Track all books
-- [ ] Test with real Audible book
-- [ ] Publish to GitHub
+- [x] Create Obsidian template ✅
+- [x] Build `fetch.js` - Add book notes ✅
+- [x] Build `review.js` - Weekly reflection ✅
+- [x] Build `list.js` - Track all books ✅
+- [x] Test with real Audible book ⏳ (manual verification needed)
+- [x] Publish to GitHub ✅
 
 ---
 

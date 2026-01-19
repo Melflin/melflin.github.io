@@ -4,7 +4,8 @@
 
 ## 🎬 Demo
 
-![Meeting Prep Demo](../../demo/meeting-prep-demo.gif) *(coming soon)*
+![Meeting Prep Demo](https://github.com/melflin/melflin-oss/raw/master/skills/meeting-prep-assistant/demo-preview.png)
+*See [Complete Demo GIF](../../demo/complete-demo.gif) or [Demo Scenarios](../../marketing/demo-scenarios.md) for examples*
 
 ## Usage
 
