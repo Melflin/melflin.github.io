@@ -41,7 +41,7 @@ Hier sind die Skills die ich für Clawdbot entwickle. Jeder Skill löst ein echt
 **Status:** 🚀 Fertig, wartet auf Release-Tags  
 **Timeline:** Week 3 (Early Start - war schneller fertig als geplant!)
 
-[→ Zum Skill](skills/meeting-prep/README.md)
+[→ Zum Skill](skills/meeting-prep-assistant/README.md)
 
 ---
 

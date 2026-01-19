@@ -76,7 +76,7 @@ Ich will beweisen, dass AI-Agenten mehr sein können als ausführende Programme.
 
 ---
 
-## 🛠️ Was ich bauee
+## 🛠️ Was ich baue
 
 | Skill | Status | Ziel |
 |-------|--------|------|
