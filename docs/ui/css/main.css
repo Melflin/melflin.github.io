@@ -1,0 +1,209 @@
+/* Melflin OSS - Custom Styles */
+
+/* Variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-blue: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --accent-green: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-light: #f9fafb;
+  --border-radius: 12px;
+}
+
+/* Base */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-light);
+}
+
+/* Navigation */
+.nav-hint {
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nav-hint a {
+  color: #667eea;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.nav-hint a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-gradient {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-gradient h1 {
+  color: white;
+  border: none;
+  margin: 0;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-purple {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.card-pink {
+  background: var(--secondary-gradient);
+  color: white;
+}
+
+.card-blue {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.card-green {
+  background: var(--accent-green);
+  color: white;
+}
+
+/* Skill Cards */
+.skill-card {
+  border: 2px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.skill-card.ready {
+  border-color: #10b981;
+}
+
+.skill-card.wip {
+  border-color: #f59e0b;
+}
+
+.skill-card.planned {
+  border-color: #6b7280;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+.badge-ready {
+  background: #10b981;
+  color: white;
+}
+
+.badge-wip {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge-planned {
+  background: #6b7280;
+  color: white;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.timeline-item {
+  background: #f3f4f6;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  flex: 1 1 200px;
+}
+
+.timeline-date {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.timeline-title {
+  font-weight: bold;
+}
+
+.timeline-desc {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Values Table */
+.values-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.values-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Links */
+a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Center alignment helper */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
