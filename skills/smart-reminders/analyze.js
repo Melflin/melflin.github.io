@@ -186,17 +186,42 @@ function groupDuplicates(duplicates) {
 }
 
 /**
- * Calculate string similarity (simple version)
+ * Calculate string similarity using Levenshtein distance
  */
 function calculateSimilarity(str1, str2) {
   const norm1 = str1.replace(/[^a-z0-9]/g, '');
   const norm2 = str2.replace(/[^a-z0-9]/g, '');
   
   if (norm1 === norm2) return 1;
-  if (norm1.includes(norm2) || norm2.includes(norm1)) return 0.7;
+  if (norm1.length === 0 || norm2.length === 0) return 0;
+  if (norm1.includes(norm2) || norm2.includes(norm1)) return 0.8;
   
-  // Levenshtein-based similarity would be better, but this is a simple fallback
-  return 0;
+  // Levenshtein distance for better similarity detection
+  const matrix = [];
+  const len1 = norm1.length;
+  const len2 = norm2.length;
+  
+  for (let i = 0; i <= len1; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= len2; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      const cost = norm1[i - 1] === norm2[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+  
+  const distance = matrix[len1][len2];
+  const maxLen = Math.max(len1, len2);
+  return maxLen === 0 ? 1 : 1 - distance / maxLen;
 }
 
 /**

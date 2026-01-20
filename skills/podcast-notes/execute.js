@@ -89,7 +89,7 @@ function sanitizeFilename(title) {
 
 async function main() {
   try {
-    const resolvedVault = path.resolve(vaultPath.replace('~', process.env.HOME || process.env.USERPROFILE));
+    const resolvedVault = path.resolve(vaultPath.replace(/^~(?=\/|$)/, process.env.HOME || process.env.USERPROFILE || ''));
     const notesDir = path.join(resolvedVault, 'Podcast Notes');
     
     if (!fs.existsSync(notesDir)) {
@@ -102,7 +102,7 @@ async function main() {
     const filepath = path.join(notesDir, filename);
     
     const noteContent = noteTemplate(analysis);
-    fs.writeFileSync(filepath, noteContent);
+    fs.writeFileSync(filepath, noteContent, 'utf8');
     
     console.log(`✅ Notes saved to: ${filepath}`);
     console.log(`📄 File: ${filename}`);
