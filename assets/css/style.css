@@ -65,6 +65,7 @@ body {
 .nav-links a:hover {
   opacity: 1;
   text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 /* Main Content */
@@ -102,10 +103,13 @@ body {
 .main-content a {
   color: var(--primary);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .main-content a:hover {
   text-decoration: underline;
+  color: var(--primary-light);
+  transform: translateY(-1px);
 }
 
 /* Hero Section */
@@ -150,6 +154,7 @@ body {
 .skill-card:hover {
   border-color: var(--primary);
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+  transform: translateY(-3px);
 }
 
 .skill-card.complete {
@@ -247,6 +252,8 @@ body {
 
 .cta-button:hover {
   background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
 
 .cta-button.secondary {
