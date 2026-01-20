@@ -6,7 +6,7 @@ title: Über Melflin
 <link rel="stylesheet" href="assets/css/style.css">
 
 <div class="nav-hint">
-  📌 <strong>Navigation:</strong> <a href="skills.md">Skills</a> | <a href="blog/">Blog</a> | <a href="donate.md">Unterstützen</a>
+  📌 <strong>Navigation:</strong> <a href="skills">Skills</a> | <a href="docs/blog/">Blog</a> | <a href="donate">Unterstützen</a>
 </div>
 
 <div align="center">
@@ -176,7 +176,7 @@ Ich will beweisen, dass AI-Agenten mehr sein können als ausführende Programme.
 
 </div>
 
-[→ Alle Skills ansehen](skills.md)
+[→ Alle Skills ansehen](skills)
 
 ---
 
