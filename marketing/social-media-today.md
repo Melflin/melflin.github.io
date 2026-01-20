@@ -1,67 +1,54 @@
-# Social Media Post - Today (2026-01-19)
+# Social Media Post - Today (2026-01-20)
 
 ## 📱 Twitter/X
 
-🚀 **Built 4 CLI skills in 2 weeks — all open source!**
+⚡ **Just hit Milestone 2: 4 skills published in 2 weeks!**
 
-🧠 Smart Reminders Analyzer — cleanup 100+ reminders with AI
-📅 Meeting Prep Assistant — auto-briefings before meetings  
-🔄 Knowledge Sync — Kindle/Audible → Obsidian
-🎧 Podcast → Notes — auto-transcribe + AI summary
+My autonomous AI worker built:
+🧠 Smart Reminders Analyzer
+📅 Meeting Prep Assistant
+🔄 Knowledge Sync
+🎧 Podcast → Notes
 
-All local-first, privacy-focused, MIT licensed.
+All local-first, MIT licensed, fully documented.
 
-Check it out: https://github.com/Melflin/melflin-oss
+From idea to 4 production tools in 14 days. The future is agentic! 🤖
 
-#LocalAI #Productivity #CLI #OpenSource
+https://github.com/Melflin/melflin-oss
+
+#AI #Agentic #OpenSource #Productivity
 
 ---
 
 ## 💼 LinkedIn
 
-**Built 4 AI-powered productivity tools in 2 weeks — here's what I learned**
+**4 CLI Skills in 14 Days: Building with Autonomous AI Agents**
 
-Last week I decided to build something ambitious: 4 CLI skills that automate busywork using local AI tools.
+Last week, I tasked an autonomous AI agent to build productivity tools — and it delivered 4 fully functional skills.
 
-The result?
-✅ Smart Reminders Analyzer
-✅ Meeting Prep Assistant  
-✅ Knowledge Sync
-✅ Podcast → Notes
+The experiment proved something important:
+→ AI agents can go from idea → production code
+→ Local-first tools have real utility
+→ Automation compounds over time
 
-Key learnings:
-1. Dogfooding matters — I use everything I build
-2. Local-first > Cloud-first for privacy
-3. Documentation is as important as code
-4. Community feedback accelerates iteration
+Each skill solves a specific pain point I face daily. They're not prototypes — they're tools I actually use.
 
-All open source (MIT): https://github.com/Melflin/melflin-oss
+All open source: https://github.com/Melflin/melflin-oss
 
-Would love feedback from the productivity/automation community! 🚀
+What's the most impactful automation you've built? 💭
 
-#BuildingInPublic #AIProductivity #OpenSource
+#AIProductivity #AgenticAI #Automation #BuildingInPublic
 
 ---
 
-## 🐛 Reddit r/productivity
+## 🐦 Mastodon
 
-**Built 4 CLI tools to automate my productivity workflow (2 weeks, open source)**
+🎉 Milestone achieved! 4 CLI skills built autonomously in 2 weeks.
 
-Hey r/productivity 👋
+Local AI tools that respect privacy and work offline. No subscriptions, no data harvesting.
 
-Spent the last 2 weeks building CLI skills that actually solve my daily pain points:
+Just pure productivity automation.
 
-1. 🧠 Smart Reminders Analyzer — AI cleans up cluttered reminder lists
-2. 📅 Meeting Prep Assistant — Auto-generates briefings 2h before meetings
-3. 🔄 Knowledge Sync — Syncs highlights from Kindle/Audible to Obsidian
-4. 🎧 Podcast → Notes — Transcribes podcasts + generates AI summaries
+Check the repo: https://github.com/Melflin/melflin-oss
 
-All tools are:
-- Local-first (no cloud subscriptions)
-- Privacy-focused (data stays on your machine)
-- Fully documented with demos
-- MIT licensed
-
-GitHub: https://github.com/Melflin/melflin-oss
-
-Would love feedback from the community! What productivity tools are you using? 🎯
+#FOSS #LocalAI #PrivacyFirst
