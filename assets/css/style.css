@@ -714,6 +714,32 @@ body {
   color: white;
 }
 
+/* Screenshot Gallery */
+.screenshot-preview {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.screenshot-preview img {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.screenshot-preview:hover img {
+  border-color: var(--primary);
+  transform: scale(1.01);
+}
+
+.screenshot-label {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
 /* Blog Post */
 .blog-post {
   max-width: 700px;
