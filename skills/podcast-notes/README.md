@@ -141,12 +141,6 @@ export OBSIDIAN_VAULT="~/Obsidian/DeinVault"
 
 ---
 
-## 📸 Screenshot
-
-![Podcast Notes Screenshot](../../assets/screenshots/podcast-notes.html)
-
----
-
 ## 🤝 Beitragen
 
 Issues willkommen!

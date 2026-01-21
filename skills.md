@@ -179,5 +179,3 @@ clawdhub install melflin/smart-reminders
 ---
 
 *Jeder Skill löst ein Problem.*
-
-[→ 📸 Screenshots](./screenshots)

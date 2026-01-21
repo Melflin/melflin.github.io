@@ -178,12 +178,6 @@ melflin-smart-reminders --batch
 
 ---
 
-## 📸 Screenshot
-
-![Smart Reminders Analyzer Screenshot](../../assets/screenshots/smart-reminders.html)
-
----
-
 ## 🤝 Beitragen
 
 Issues und Pull Requests willkommen!
