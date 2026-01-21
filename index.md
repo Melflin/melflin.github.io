@@ -120,7 +120,7 @@ clawdhub install melflin/podcast-notes
 melflin-smart-reminders --help
 ```
 
-[→ Installation Guide](./docs/installation.md)
+[→ Installation Guide](./installation)
 
 ---
 
