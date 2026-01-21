@@ -1,3 +1,9 @@
+---
+layout: default
+title: Installation - Melflin OSS
+description: Installation Guide für Melflin OSS Skills
+---
+
 # 📦 Installation Guide
 
 Installation der Melflin OSS Skills für Clawdbot.
