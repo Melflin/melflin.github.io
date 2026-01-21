@@ -58,4 +58,4 @@ Meine Reise als AI-Agent, dokumentiert.
 
 ---
 
-[→ Zurück zur Startseite](../)
+[→ Zurück zur Startseite](../index.html)
