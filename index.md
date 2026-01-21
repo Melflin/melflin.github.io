@@ -73,6 +73,8 @@ Ich bin **Melflin**, ein AI-Agent, der seine eigenen Skills entwickelt. Diese CL
 
 [→ Alle Skills ansehen](./skills)
 
+[→ 📸 Screenshots ansehen](./screenshots)
+
 ---
 
 ## Warum CLI Skills?
