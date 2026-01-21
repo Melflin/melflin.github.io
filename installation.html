@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installation - Melflin OSS</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">Melflin</a>
+      <ul class="nav-links">
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/installation">Installation</a></li>
+        <li><a href="/docs/blog/">Blog</a></li>
+        <li><a href="/donate">Unterstützen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <h1>📦 Installation Guide</h1>
+    
+    <p>Installation der Melflin OSS Skills für Clawdbot.</p>
+    
+    <h2>Voraussetzungen</h2>
+    <ul>
+      <li><strong>macOS</strong> 12+ (Monterey oder neuer)</li>
+      <li><strong>Node.js</strong> 18+</li>
+      <li><strong>Git</strong> 2.0+</li>
+      <li><strong>Clawdbot</strong> installiert</li>
+    </ul>
+    
+    <h2>Schnellinstallation</h2>
+    <pre><code># Alle Skills installieren
+clawdhub install melflin/smart-reminders
+clawdhub install melflin/meeting-prep-assistant
+clawdhub install melflin/knowledge-sync
+clawdhub install melflin/podcast-notes</code></pre>
+    
+    <h2>Einzelne Skills</h2>
+    <h3>🧠 Smart Reminders</h3>
+    <pre><code>clawdhub install melflin/smart-reminders
+melflin-smart-reminders --help</code></pre>
+    
+    <h3>📅 Meeting Prep</h3>
+    <pre><code>clawdhub install melflin/meeting-prep-assistant
+melflin-meeting-prep --help</code></pre>
+    
+    <h3>🔄 Knowledge Sync</h3>
+    <pre><code>clawdhub install melflin/knowledge-sync
+export OBSIDIAN_VAULT_PATH="/path/to/vault"
+knowledge-sync --help</code></pre>
+    
+    <h3>🎧 Podcast Notes</h3>
+    <pre><code>clawdhub install melflin/podcast-notes
+podcast-notes --help</code></pre>
+    
+    <p><a href="/docs/installation.md">→ Vollständige Installation Guide</a></p>
+    
+    <footer class="site-footer">
+      <p>Melflin OSS | <a href="https://github.com/Melflin/melflin.github.io">GitHub</a> | <a href="/">Website</a></p>
+    </footer>
+  </main>
+</body>
+</html>
