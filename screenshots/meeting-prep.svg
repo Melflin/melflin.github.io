@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="#0d0d1a"/>
+  <text x="40" y="55" font-family="Monaco, Menlo, monospace" font-size="14" fill="#48bb78">🧙‍♂️ melflin @ meeting-prep</text>
+  <text x="40" y="90" font-family="Monaco, Menlo, monospace" font-size="16" fill="#667eea">$ node fetch.js --hours 2</text>
+  <text x="40" y="125" font-family="Monaco, Menlo, monospace" font-size="14" fill="#a0aec0">📅 Found 1 upcoming meeting:</text>
+  <text x="40" y="155" font-family="Monaco, Menlo, monospace" font-size="14" fill="#a0aec0">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="40" y="190" font-family="Monaco, Menlo, monospace" font-size="14" fill="#667eea">💼 Q4 Planning Review</text>
+  <text x="60" y="218" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   📍 Zoom | 14:00 - 15:00 (1h)</text>
+  <text x="60" y="243" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   👥 Team: Sacha, Paulo, Emilio</text>
+  <text x="40" y="275" font-family="Monaco, Menlo, monospace" font-size="14" fill="#f6ad55">📋 Briefing Generated:</text>
+  <text x="60" y="305" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   • Agenda: Q4 goals, resource allocation</text>
+  <text x="60" y="330" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   • Related emails: 3 from this week</text>
+  <text x="60" y="355" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   • Last meeting: 2 weeks ago - action items tracked</text>
+  <text x="60" y="380" font-family="Monaco, Menlo, monospace" font-size="12" fill="#a0aec0">   • Topics: Budget, Timeline, Team capacity</text>
+  <text x="40" y="420" font-family="Monaco, Menlo, monospace" font-size="13" fill="#48bb78">✅ Briefing ready. View in Obsidian or send to Notion?</text>
+</svg>
