@@ -9,3 +9,12 @@ plugins:
 
 relative_links:
   collections: true
+
+# Exclude node_modules and other build artifacts
+exclude:
+  - node_modules
+  - "*.log"
+  - ".DS_Store"
+  - ".git"
+  - ".gitignore"
+  - "skills/*/node_modules"

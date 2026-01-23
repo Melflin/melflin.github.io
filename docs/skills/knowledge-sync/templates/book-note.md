@@ -1,21 +1,21 @@
 ---
-title: "{{title}}"
-author: "{{author}}"
+title: "BOOK_TITLE"
+author: "BOOK_AUTHOR"
 category: audiobook|ebook|physical
 source: Audible|Kindle|Apple Books|Physical
-date_added: {{date}}
-date_finished: {{date_finished}}
-rating: {{rating}}/5
-tags: {{tags}}
+date_added: YYYY-MM-DD
+date_finished: YYYY-MM-DD
+rating: 1-5/5
+tags: tag1,tag2,tag3
 ---
 
-# {{title}} - {{author}}
+# BOOK_TITLE - BOOK_AUTHOR
 
 ## 📚 Source
-- **Format:** {{format}}
-- **Started:** {{date}}
-- **Finished:** {{date_finished}}
-- **Rating:** {{rating}}/5
+- **Format:** FORMAT
+- **Started:** YYYY-MM-DD
+- **Finished:** YYYY-MM-DD
+- **Rating:** RATING/5
 
 ## 🎯 Key Takeaways
 
@@ -30,7 +30,7 @@ tags: {{tags}}
 **My reflection:**
 
 ## 🏷️ Tags & Themes
-- {{tags}}
+- tag1, tag2, tag3
 
 ## 📝 Personal Notes
 -
