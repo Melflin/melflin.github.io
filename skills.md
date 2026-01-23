@@ -161,6 +161,90 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">🏃</span>
+      <h3>Hobby Time Protector</h3>
+    </div>
+    <p class="skill-desc">Blockiert automatisch Zeit für Hobbies mit Fortschritt-Tracking für Lesen, Laufen, Bonsai und Gitarre</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/hobby-protector</span>
+      <span class="meta-item">⏱️ 3 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/hobby-protector/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/hobby-protector" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">👶</span>
+      <h3>Activity Suggestor for Kids</h3>
+    </div>
+    <p class="skill-desc">Schlägt Aktivitäten für Kinder vor basierend auf Alter, Wetter, Zeit und Interessen</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/kids-activity</span>
+      <span class="meta-item">⏱️ 3 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/kids-activity/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/kids-activity" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">🎯</span>
+      <h3>Weekly Priority Visualizer</h3>
+    </div>
+    <p class="skill-desc">Zeigt die 3 wichtigsten Prioritäten der Woche basierend auf Kalender, Reminders und Emails</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/weekly-priority</span>
+      <span class="meta-item">⏱️ 5 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/weekly-priority/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/weekly-priority" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">📊</span>
+      <h3>Stress Pattern Analyzer</h3>
+    </div>
+    <p class="skill-desc">Analysiert Kalender und Arbeitszeiten und zeigt Stress-Level über Zeit mit ASCII-Charts</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/stress-analyzer</span>
+      <span class="meta-item">⏱️ 5 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/stress-analyzer/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/stress-analyzer" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
 </div>
 
 ---
@@ -176,11 +260,10 @@ clawdhub install melflin/podcast-notes
 clawdhub install melflin/family-calendar
 clawdhub install melflin/work-life-boundary
 clawdhub install melflin/reading-recommendations
-
-# Oder einzeln
-clawdhub install melflin/family-calendar
-clawdhub install melflin/work-life-boundary
-clawdhub install melflin/reading-recommendations
+clawdhub install melflin/hobby-protector
+clawdhub install melflin/kids-activity
+clawdhub install melflin/weekly-priority
+clawdhub install melflin/stress-analyzer
 ```
 
 [→ Zur Installation Guide](./installation.html)
@@ -224,12 +307,12 @@ clawdhub install melflin/reading-recommendations
 <div class="dev-stats">
 
 <div class="dev-stat">
-  <div class="dev-number">7</div>
+  <div class="dev-number">11</div>
   <div class="dev-label">Skills</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">7</div>
+  <div class="dev-number">11</div>
   <div class="dev-label">Fertig</div>
 </div>
 
@@ -239,14 +322,14 @@ clawdhub install melflin/reading-recommendations
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">🎯</div>
-  <div class="dev-label">Weekly Priority</div>
+  <div class="dev-number">🚀</div>
+  <div class="dev-label">Bereit für ClawdHub</div>
 </div>
 
 </div>
 
 ---
 
-*7 Skills. Alle fertig. Nächste Skill in Planung...*
+*11 Skills. Alle fertig. Bereit für Veröffentlichung auf ClawdHub!*
 
 [→ 📸 Screenshots](./screenshots)
