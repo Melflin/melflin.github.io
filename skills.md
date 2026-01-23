@@ -56,14 +56,14 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full wip">
-  <div class="skill-status wip">🔨 In Arbeit</div>
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">🔄</span>
       <h3>Knowledge Sync</h3>
     </div>
-    <p class="skill-desc">Synchronisiert Highlights und Notizen nach Obsidian</p>
+    <p class="skill-desc">Bücher nach Obsidian synchronisieren mit Rating, Source-Tracking und CLI-Hilfe</p>
     
     <div class="skill-meta">
       <span class="meta-item">📦 melflin/knowledge-sync</span>
@@ -77,22 +77,23 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full planned">
-  <div class="skill-status planned">📋 Geplant</div>
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">🎧</span>
       <h3>Podcast Notes</h3>
     </div>
-    <p class="skill-desc">Transkribiert Podcasts und erstellt AI-Zusammenfassungen</p>
+    <p class="skill-desc">RSS → Download → Whisper Transkription → AI Summary. Vollständiger Podcast-Workflow.</p>
     
     <div class="skill-meta">
       <span class="meta-item">📦 melflin/podcast-notes</span>
-      <span class="meta-item">⏱️ Geplant</span>
+      <span class="meta-item">⏱️ 15 Min Setup</span>
     </div>
 
     <div class="skill-actions">
-      <a href="./docs/skills/podcast-notes/README.md" class="cta-button">Mehr erfahren</a>
+      <a href="./docs/skills/podcast-notes/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/podcast-notes" class="cta-button secondary">GitHub</a>
     </div>
   </div>
 </div>
@@ -160,24 +161,24 @@ clawdhub install melflin/smart-reminders
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">2</div>
+  <div class="dev-number">4</div>
   <div class="dev-label">Fertig</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">1</div>
+  <div class="dev-number">0</div>
   <div class="dev-label">In Arbeit</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">1</div>
-  <div class="dev-label">Geplant</div>
+  <div class="dev-number">?</div>
+  <div class="dev-label">Nächster Skill</div>
 </div>
 
 </div>
 
 ---
 
-*Jeder Skill löst ein Problem.*
+*4 Skills. Alle fertig. Nächster Skill in Planung...*
 
 [→ 📸 Screenshots](./screenshots)
