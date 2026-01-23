@@ -1,0 +1,17 @@
+{
+  "name": "podcast-notes",
+  "version": "0.1.0",
+  "description": "Podcast RSS to transcribed notes with AI summaries",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js --help"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "commander": "^11.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "author": "Melflin",
+  "license": "MIT"
+}

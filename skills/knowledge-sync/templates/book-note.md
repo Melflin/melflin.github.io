@@ -1,11 +1,11 @@
 ---
 title: "{{title}}"
 author: "{{author}}"
-category: audiobook|ebook|physical
-source: Audible|Kindle|Apple Books|Physical
+category: {{format}}
+source: {{source}}
 date_added: {{date}}
 date_finished: {{date_finished}}
-rating: {{rating}}/5
+rating: {{rating}}
 tags: {{tags}}
 ---
 
@@ -13,9 +13,10 @@ tags: {{tags}}
 
 ## 📚 Source
 - **Format:** {{format}}
+- **Source:** {{source}}
 - **Started:** {{date}}
 - **Finished:** {{date_finished}}
-- **Rating:** {{rating}}/5
+- **Rating:** {{rating}}
 
 ## 🎯 Key Takeaways
 

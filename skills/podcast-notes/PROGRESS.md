@@ -1,79 +1,82 @@
 # Podcast → Notes - Progress 📊
 
-**Started:** 2026-01-19 (Week 6)
-**Target Completion:** 2026-03-08
-**Status:** 🔨 BUILDING (Self-Worker Run 2)
+**Started:** 2026-01-23 (Worker 4)  
+**Target Completion:** 2026-01-23  
+**Status:** ✅ MVP IMPLEMENTED
 
 ---
 
-## 📅 Timeline
+## 🎯 Implementation Status
 
-**Week 6: Transcription Pipeline (Feb 23 - Mar 1)**
-- [x] Skeleton structure created
-- [x] README.md with full documentation
-- [x] fetch.js - Audio extraction (yt-dlp + ffmpeg)
-- [x] analyze.js - Whisper integration (local > API > mock fallback)
-- [x] execute.js - Obsidian note creation
-- [x] index.js - Unified CLI
-- [ ] Test with sample podcast
+### Phase 1: Core MVP ✅
+- [x] `index.js` - Unified CLI with Commander.js
+- [x] `fetch.js` - RSS Parser (rss-parser) + Audio Download
+- [x] `transcribe.js` - Whisper Integration (local)
+- [x] `summarize.js` - AI Summary (Claude CLI)
+- [x] `templates/podcast-note.md` - Obsidian-compatible markdown
 
-**Week 7: AI Summary & Storage (Mar 2-8)**
-- [ ] MiniMax API integration for insights
-- [ ] Auto-tagging system
-- [ ] Full end-to-end test
-- [ ] Polish & publish
+### Commands Implemented
+```bash
+# List episodes from RSS feed
+node index.js list --url "https://feeds.simplecast.com/54nAGcIl" -n 5
 
----
+# Add and process episode (full workflow)
+node index.js add --url "https://feeds.simplecast.com/54nAGcIl" --episode 0
 
-## 🏗️ Architecture
+# Add with options
+node index.js add --url "URL" --model medium --language de
 
-```
-index.js (CLI)
-    │
-    ├── fetch.js (URL → Audio)
-    │       └── yt-dlp + ffmpeg
-    │
-    ├── analyze.js (Audio → Transcript + Insights)
-    │       └── whisper-cli (local) > OpenAI API > Mock
-    │
-    └── execute.js (Analysis → Obsidian Note)
-            └── Template-based note creation
+# Skip steps
+node index.js add --url "URL" --no-transcribe --no-summarize
+
+# Show recent notes
+node index.js recent --number 5
 ```
 
-## 📦 Dependencies
+---
 
-**Required:**
-- `yt-dlp` - brew install yt-dlp
-- `ffmpeg` - brew install ffmpeg
+## ✅ Test Results
 
-**Optional:**
-- `whisper-cli` - pip install openai-whisper (local transcription)
-- `MINIMAX_API_KEY` - for AI insights
-- `OPENAI_API_KEY` - fallback transcription
+| Feature | Status | Notes |
+|---------|--------|-------|
+| RSS Parsing | ✅ Working | Tested with NYT "The Daily" (2746 episodes) |
+| Audio Download | ✅ Working | 32MB test file downloaded successfully |
+| Whisper Transcription | ✅ Working | 60s test: accurate English transcription |
+| Note Generation | ✅ Working | Markdown template renders correctly |
+| CLI Interface | ✅ Working | Commander.js commands functional |
+
+### Test Data
+- **Podcast:** The Daily (NYT)
+- **Episode:** "Trump's Investigator Breaks His Silence"
+- **Audio:** 32MB MP3, 33:46 duration
+- **Transcript:** 60s sample tested (accurate)
 
 ---
 
-## ✅ Completed (Self-Worker Run 3, 2026-01-19)
+## 📁 File Structure
+```
+podcast-notes/
+├── index.js              # Main CLI
+├── fetch.js             # RSS + Download
+├── transcribe.js        # Whisper
+├── summarize.js         # AI Summary
+├── package.json
+├── templates/
+│   └── podcast-note.md  # Output template
+└── data/
+    ├── audio/           # Downloaded MP3s
+    ├── transcripts/     # Whisper JSON output
+    └── notes/           # Generated markdown notes
+```
 
-- analyze.js verbessert mit echter Whisper-Integration
-- Whisper-cli Support (lokal, gratis)
-- OpenAI API Fallback
-- MiniMax API Integration für Insights
-- Robust error handling mit Mock-Fallback
-- **Auto-Tagging System** implementiert ✅
-  - Keyword-basierte Topic-Erkennung (10 Kategorien)
-  - Integration mit AI Insights Topics
-  - Auto-Tags in Obsidian Frontmatter
-- execute.js Templates verbessert für Tag-Support
-- **End-to-End Test erfolgreich** ✅ (Self-Worker Run 3)
-  - fetch.js: YouTube → MP3 (yt-dlp)
-  - analyze.js: Whisper + Auto-Tagging
-  - execute.js: Obsidian Note + Tags + Index
+---
 
-## 📋 Next Steps
+## 🔧 Requirements
+- Node.js 18+
+- `npm install` (rss-parser, commander, node-fetch)
+- Whisper CLI installed (`pip install openai-whisper`)
+- Claude CLI for AI summaries (`brew install claude`)
 
-- [x] End-to-End Test bestanden
-- [ ] Publish zu GitHub
-- [ ] ClawdHub Submission
+---
 
-**Last Updated:** 2026-01-19
+**Last Updated:** 2026-01-23

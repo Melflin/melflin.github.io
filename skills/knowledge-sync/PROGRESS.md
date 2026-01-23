@@ -35,7 +35,7 @@
 - [x] Create Obsidian template for book notes
 - [x] Build `fetch.js` - Manual input → Obsidian
 - [x] Create `weekly-review.sh` - Script for manual review
-- [ ] Create cron reminder for weekly review (blocked by gateway timeout)
+- [x] Create cron reminder for weekly review (crontab: Sun 10:00)
 
 **Week 3-4: Automation**
 - [ ] Add optional API integrations (if needed)

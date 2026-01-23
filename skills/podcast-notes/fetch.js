@@ -1,49 +1,106 @@
 #!/usr/bin/env node
+import Parser from 'rss-parser';
+import fetch from 'node-fetch';
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import { pipeline } from 'stream';
+
+const streamPipeline = promisify(pipeline);
+
 /**
- * Podcast → Notes: Fetch Module
- * 
- * Downloads audio from podcast/YouTube URL and prepares for transcription.
- * 
- * Usage:
- *   node fetch.js <url> [--output <path>]
- * 
- * Dependencies:
- *   - yt-dlp (YouTube/podcast downloader)
- *   - ffmpeg (audio processing)
+ * Parse RSS feed and return podcast episodes
  */
+export async function parsePodcastFeed(feedUrl) {
+  const parser = new Parser({
+    customFields: {
+      item: [
+        ['itunes:duration', 'duration'],
+        ['itunes:author', 'author'],
+        ['enclosure', 'enclosure']
+      ]
+    }
+  });
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-const args = process.argv.slice(2);
-const url = args[0];
-const outputArg = args.find(a => a.startsWith('--output='));
-const outputPath = outputArg ? outputArg.split('=')[1] : '/tmp/podcast-audio.mp3';
-
-if (!url) {
-  console.error('❌ Error: URL required');
-  console.error('Usage: node fetch.js <url> [--output=<path>]');
-  process.exit(1);
+  try {
+    const feed = await parser.parseURL(feedUrl);
+    
+    return {
+      podcast: {
+        title: feed.title,
+        description: feed.description,
+        link: feed.link,
+        image: feed.image?.url || feed.itunes?.image
+      },
+      episodes: feed.items.map(item => ({
+        title: item.title,
+        description: item.contentSnippet || item.content,
+        url: item.link,
+        audioUrl: item.enclosure?.url,
+        published: item.pubDate,
+        duration: item.duration,
+        author: item.author || feed.title
+      }))
+    };
+  } catch (error) {
+    throw new Error(`Failed to parse RSS feed: ${error.message}`);
+  }
 }
 
-console.log(`📥 Fetching audio from: ${url}`);
-console.log(`📁 Output: ${outputPath}`);
+/**
+ * Download audio file from URL
+ */
+export async function downloadAudio(audioUrl, outputPath) {
+  try {
+    console.log(`📥 Downloading audio from ${audioUrl}...`);
+    
+    const response = await fetch(audioUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
 
-try {
-  // Using yt-dlp for extraction
-  const cmd = `yt-dlp -f bestaudio -o "${outputPath}" --extract-audio --audio-format mp3 "${url}"`;
-  console.log(`🔧 Running: ${cmd}`);
-  
-  execSync(cmd, { stdio: 'inherit' });
-  
-  if (fs.existsSync(outputPath)) {
-    console.log('✅ Audio downloaded successfully');
-    console.log(`📊 File size: ${(fs.statSync(outputPath).size / 1024 / 1024).toFixed(2)} MB`);
-  } else {
-    throw new Error('Output file not created');
+    // Ensure directory exists
+    const dir = path.dirname(outputPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Stream download to file
+    await streamPipeline(response.body, fs.createWriteStream(outputPath));
+    
+    const stats = fs.statSync(outputPath);
+    const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
+    console.log(`✅ Downloaded ${sizeMB} MB to ${outputPath}`);
+    
+    return outputPath;
+  } catch (error) {
+    throw new Error(`Failed to download audio: ${error.message}`);
   }
-} catch (error) {
-  console.error(`❌ Error fetching audio: ${error.message}`);
-  process.exit(1);
+}
+
+/**
+ * Get latest episode from feed
+ */
+export async function getLatestEpisode(feedUrl) {
+  const { podcast, episodes } = await parsePodcastFeed(feedUrl);
+  
+  if (episodes.length === 0) {
+    throw new Error('No episodes found in feed');
+  }
+
+  return {
+    podcast,
+    episode: episodes[0]
+  };
+}
+
+/**
+ * Generate safe filename from title
+ */
+export function sanitizeFilename(title) {
+  return title
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase()
+    .substring(0, 100);
 }

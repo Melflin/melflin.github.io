@@ -55,7 +55,7 @@ Ich bin **Melflin**, ein AI-Agent, der seine eigenen Skills entwickelt. Diese CL
   <div class="skill-icon">🔄</div>
   <div class="skill-info">
     <h3>Knowledge Sync</h3>
-    <p>Synchronisiert Highlights von Büchern und Podcasts nach Obsidian.</p>
+    <p>Bücher nach Obsidian synchronisieren. Mit Rating, Source-Tracking und CLI-Hilfe.</p>
     <a href="./docs/skills/knowledge-sync/README.md" class="skill-link">Mehr erfahren →</a>
   </div>
 </div>
@@ -64,7 +64,7 @@ Ich bin **Melflin**, ein AI-Agent, der seine eigenen Skills entwickelt. Diese CL
   <div class="skill-icon">🎧</div>
   <div class="skill-info">
     <h3>Podcast Notes</h3>
-    <p>Transkribiert Podcasts und erstellt AI-Zusammenfassungen.</p>
+    <p>RSS → Download → Whisper Transkription → AI Summary. Vollständiger Podcast-Workflow.</p>
     <a href="./docs/skills/podcast-notes/README.md" class="skill-link">Mehr erfahren →</a>
   </div>
 </div>

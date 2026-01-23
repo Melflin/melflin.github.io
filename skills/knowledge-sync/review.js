@@ -11,21 +11,71 @@ const path = require('path');
 const OBSIDIAN_VAULT_PATH = process.env.OBSIDIAN_VAULT_PATH || 
   '/Users/melf/Library/Mobile Documents/iCloud~md~obsidian/Documents/Melf2025/03 Ressources/Bücher';
 
-const DAYS = parseInt(process.argv[2]) || 30;
+function parseArgs() {
+  const args = { days: 30, quiet: false, help: false };
+  const argv = process.argv.slice(2);
+  
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    if (arg === '--help' || arg === '-h') {
+      args.help = true;
+    } else if (arg === '--quiet') {
+      args.quiet = true;
+    } else if (arg === '--days') {
+      args.days = parseInt(argv[i + 1], 10) || 30;
+      i++;
+    } else if (!arg.startsWith('--')) {
+      // Support positional argument for days
+      args.days = parseInt(arg, 10) || 30;
+    }
+  }
+  
+  return args;
+}
+
+function showHelp() {
+  console.log('📚 Knowledge Sync - Review');
+  console.log('');
+  console.log('Usage: node review.js [days] [options]');
+  console.log('');
+  console.log('Show books read in the last N days (default: 30).');
+  console.log('');
+  console.log('Options:');
+  console.log('  --days <number>    Number of days to look back (default: 30)');
+  console.log('  --quiet            Suppress headers and formatting');
+  console.log('  --help, -h         Show this help');
+  console.log('');
+  console.log('Examples:');
+  console.log('  node review.js              # Last 30 days');
+  console.log('  node review.js 7            # Last 7 days');
+  console.log('  node review.js --days 14    # Last 14 days');
+  console.log('  node review.js --quiet      # Minimal output');
+}
 
 function main() {
+  const args = parseArgs();
+  
+  if (args.help) {
+    showHelp();
+    return;
+  }
+  
   if (!fs.existsSync(OBSIDIAN_VAULT_PATH)) {
-    console.log(`📚 No books directory found: ${OBSIDIAN_VAULT_PATH}`);
-    console.log('   Run "node index.js add" to add your first book!');
+    if (!args.quiet) {
+      console.log(`📚 No books directory found: ${OBSIDIAN_VAULT_PATH}`);
+      console.log('   Run "node index.js add" to add your first book!');
+    }
     return;
   }
   
   const files = fs.readdirSync(OBSIDIAN_VAULT_PATH).filter(f => f.endsWith('.md'));
   const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - DAYS);
+  cutoffDate.setDate(cutoffDate.getDate() - args.days);
   
-  console.log(`📚 Books read in the last ${DAYS} days:`);
-  console.log('');
+  if (!args.quiet) {
+    console.log(`📚 Books read in the last ${args.days} days:`);
+    console.log('');
+  }
   
   let recentBooks = [];
   
@@ -53,18 +103,27 @@ function main() {
   }
   
   if (recentBooks.length === 0) {
-    console.log('   No books added recently.');
-    console.log('   Add a book: node index.js add --title "Book Title" --author "Author"');
+    if (!args.quiet) {
+      console.log('   No books added recently.');
+      console.log('   Add a book: node index.js add --title "Book Title" --author "Author"');
+    }
   } else {
     for (const book of recentBooks) {
-      const stars = book.rating ? '★'.repeat(parseInt(book.rating)) : '☆';
-      console.log(`  📖 ${book.title} - ${book.author}`);
-      console.log(`     ${book.date} | ${book.source || 'N/A'} | ${stars}`);
-      console.log('');
+      if (args.quiet) {
+        // Minimal output in quiet mode
+        console.log(`${book.title} - ${book.author} (${book.date})`);
+      } else {
+        const stars = book.rating ? '★'.repeat(parseInt(book.rating.toString().split('/')[0])) : '☆';
+        console.log(`  📖 ${book.title} - ${book.author}`);
+        console.log(`     ${book.date} | ${book.source || 'N/A'} | ${stars}`);
+        console.log('');
+      }
     }
   }
   
-  console.log('💡 Tip: Add highlights and notes in Obsidian!');
+  if (!args.quiet) {
+    console.log('💡 Tip: Add highlights and notes in Obsidian!');
+  }
 }
 
 function parseFrontmatter(yaml) {

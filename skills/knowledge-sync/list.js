@@ -11,20 +11,64 @@ const path = require('path');
 const OBSIDIAN_VAULT_PATH = process.env.OBSIDIAN_VAULT_PATH || 
   '/Users/melf/Library/Mobile Documents/iCloud~md~obsidian/Documents/Melf2025/03 Ressources/Bücher';
 
+function parseArgs() {
+  const args = { quiet: false, help: false };
+  const argv = process.argv.slice(2);
+  
+  for (const arg of argv) {
+    if (arg === '--help' || arg === '-h') {
+      args.help = true;
+    } else if (arg === '--quiet') {
+      args.quiet = true;
+    }
+  }
+  
+  return args;
+}
+
+function showHelp() {
+  console.log('📚 Knowledge Sync - List');
+  console.log('');
+  console.log('Usage: node list.js [options]');
+  console.log('');
+  console.log('List all books synced to Obsidian, sorted by date added (newest first).');
+  console.log('');
+  console.log('Options:');
+  console.log('  --quiet        Suppress headers and formatting');
+  console.log('  --help, -h     Show this help');
+  console.log('');
+  console.log('Examples:');
+  console.log('  node list.js');
+  console.log('  node list.js --quiet');
+}
+
 function main() {
+  const args = parseArgs();
+  
+  if (args.help) {
+    showHelp();
+    return;
+  }
+  
   if (!fs.existsSync(OBSIDIAN_VAULT_PATH)) {
-    console.log(`📚 No books directory found: ${OBSIDIAN_VAULT_PATH}`);
+    if (!args.quiet) {
+      console.log(`📚 No books directory found: ${OBSIDIAN_VAULT_PATH}`);
+    }
     return;
   }
   
   const files = fs.readdirSync(OBSIDIAN_VAULT_PATH).filter(f => f.endsWith('.md'));
   
-  console.log(`📚 All synced books (${files.length} total):`);
-  console.log('');
+  if (!args.quiet) {
+    console.log(`📚 All synced books (${files.length} total):`);
+    console.log('');
+  }
   
   if (files.length === 0) {
-    console.log('   No books yet. Add your first!');
-    console.log('   node index.js add --title "Book Title" --author "Author"');
+    if (!args.quiet) {
+      console.log('   No books yet. Add your first!');
+      console.log('   node index.js add --title "Book Title" --author "Author"');
+    }
     return;
   }
   
@@ -65,13 +109,21 @@ function main() {
   
   // Display
   for (const book of books) {
-    const stars = book.rating ? '★'.repeat(Math.min(parseInt(book.rating), 5)) : '?';
-    const dateStr = book.date ? `(${book.date})` : '';
-    console.log(`  📖 ${book.title} - ${book.author} ${stars} ${dateStr}`);
+    if (args.quiet) {
+      // Minimal output in quiet mode
+      console.log(`${book.title} - ${book.author}`);
+    } else {
+      const ratingNum = book.rating ? parseInt(book.rating.toString().split('/')[0]) : 0;
+      const stars = ratingNum > 0 ? '★'.repeat(Math.min(ratingNum, 5)) : '?';
+      const dateStr = book.date ? `(${book.date})` : '';
+      console.log(`  📖 ${book.title} - ${book.author} ${stars} ${dateStr}`);
+    }
   }
   
-  console.log('');
-  console.log(`Total: ${books.length} books`);
+  if (!args.quiet) {
+    console.log('');
+    console.log(`Total: ${books.length} books`);
+  }
 }
 
 function parseFrontmatter(yaml) {

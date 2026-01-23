@@ -4,7 +4,7 @@
 # 
 # Cron setup (every Sunday at 10:00):
 #   crontab -e
-#   0 10 * * * /Users/melf/GitMelflin/skills/knowledge-sync/weekly-review.sh
+#   0 10 * * * /Users/melf/melflin/skills/knowledge-sync/weekly-review.sh
 
 cd /Users/melf/GitMelflin/skills/knowledge-sync
 
