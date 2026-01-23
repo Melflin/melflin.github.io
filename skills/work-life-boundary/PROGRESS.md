@@ -15,14 +15,36 @@
 - [x] Projektstruktur erstellt
 - [x] PLAN.md dokumentiert
 - [x] README.md erstellt
+- [x] index.js MVP (Boundary Setup + Reminder)
 
 ### In Progress 🔨
-- [ ] index.js MVP (Boundary Setup + Reminder)
+- [ ] Apple Calendar Integration
+- [ ] SKILL.md für Clawdbot Integration
 
 ### Todo 📋
-- [ ] Apple Calendar Integration
-- [ ] Benachrichtigungen
 - [ ] Testing und Veröffentlichung
+- [ ] Screenshots erstellen
+
+---
+
+## Iteration 3 - 23.01.2026
+
+### Erledigt
+- ✅ Apple Calendar Integration begonnen
+- ✅ calendar.js Helper-Modul mit AppleScript-Queries
+- ✅ getTodayEvents() für Tagesübersicht
+- ✅ findBoundaryConflicts() für Konflikt-Erkennung
+- ✅ protectFamilyTime() für automatischen Schutz
+
+### Gelernt
+- AppleScript calender queries: `tell application "Calendar"`
+- Events können nach Zeit und Kalender gefiltert werden
+- Conflicts: Arbeits-Termine während Familien-Zeit erkennen
+
+### Nächste Schritte
+- calendar.js fertigstellen
+- index.js mit Calendar-Funktionen erweitern
+- Iteration 4: Testing und Git Commit
 
 ---
 
@@ -30,18 +52,9 @@
 
 ### Erledigt
 - ✅ README.md mit Feature-Übersicht erstellt
-- ✅ index.js MVP mit Boundary Setup + Reminder begonnen
-- ✅ createNewSkill.md als Kopiervorlage für SKILL.md
-
-### Gelernt
-- AppleScript osascript Befehle für Notifications identifiziert
-- node-cron für zeitbasierte Checks geeignet
-- Konfiguration in ~/.melflin/work-life-boundary.json
-
-### Nächste Schritte
-- index.js MVP fertigstellen (Boundary Setup + Reminder)
-- Erste Testläufe durchführen
-- Iteration 3: Apple Calendar Integration
+- ✅ index.js MVP mit Boundary Setup + Reminder
+- ✅ CLI Commands: setup, status, remind, config
+- ✅ Notification Center Integration via osascript
 
 ---
 
@@ -56,9 +69,13 @@
 
 ## Changelog
 
+### v0.3.0 - 23.01.2026
+- ✅ Apple Calendar Integration begonnen
+- ✅ calendar.js Helper-Modul
+
 ### v0.2.0 - 23.01.2026
 - ✅ README.md mit Feature-Übersicht
-- ✅ index.js MVP begonnen
+- ✅ index.js MVP
 
 ### v0.1.0 - 23.01.2026
 - 🎉 Initial release
