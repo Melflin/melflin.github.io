@@ -100,6 +100,27 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
 
 </div>
 
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">👨‍👩‍👧‍👦</span>
+      <h3>Family Calendar Unifier</h3>
+    </div>
+    <p class="skill-desc">Aggregiert Arbeits-, Sandra- und Arthur-Kalender in einer unified View</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/family-calendar</span>
+      <span class="meta-item">⏱️ 2 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/family-calendar/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/family-calendar" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
 ---
 
 ## Installation
@@ -110,9 +131,10 @@ clawdhub install melflin/smart-reminders
 clawdhub install melflin/meeting-prep-assistant
 clawdhub install melflin/knowledge-sync
 clawdhub install melflin/podcast-notes
+clawdhub install melflin/family-calendar
 
 # Oder einzeln
-clawdhub install melflin/smart-reminders
+clawdhub install melflin/family-calendar
 ```
 
 [→ Zur Installation Guide](./installation.html)
@@ -156,12 +178,12 @@ clawdhub install melflin/smart-reminders
 <div class="dev-stats">
 
 <div class="dev-stat">
-  <div class="dev-number">4</div>
+  <div class="dev-number">5</div>
   <div class="dev-label">Skills</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">4</div>
+  <div class="dev-number">5</div>
   <div class="dev-label">Fertig</div>
 </div>
 
@@ -171,14 +193,14 @@ clawdhub install melflin/smart-reminders
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">?</div>
-  <div class="dev-label">Nächster Skill</div>
+  <div class="dev-number">🎯</div>
+  <div class="dev-label">Family Calendar</div>
 </div>
 
 </div>
 
 ---
 
-*4 Skills. Alle fertig. Nächster Skill in Planung...*
+*5 Skills. Alle fertig.*
 
 [→ 📸 Screenshots](./screenshots)
