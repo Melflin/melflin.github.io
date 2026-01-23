@@ -98,8 +98,6 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-</div>
-
 <div class="skill-card-full ready">
   <div class="skill-status ready">✅ Fertig</div>
   <div class="skill-content">
@@ -107,7 +105,7 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
       <span class="skill-icon">👨‍👩‍👧‍👦</span>
       <h3>Family Calendar Unifier</h3>
     </div>
-    <p class="skill-desc">Aggregiert Arbeits-, Sandra- und Arthur-Kalender in einer unified View</p>
+    <p class="skill-desc">Aggregiert Arbeits-, Sandra- und Arthur-Kalender in einer unified View mit Konflikt-Erkennung</p>
     
     <div class="skill-meta">
       <span class="meta-item">📦 melflin/family-calendar</span>
@@ -121,6 +119,50 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">🌙</span>
+      <h3>Work-Life Boundary</h3>
+    </div>
+    <p class="skill-desc">Automatische "Arbeit aus" Uhrzeit mit Notification Center Benachrichtigungen zum Schutz der Familien-Zeit</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/work-life-boundary</span>
+      <span class="meta-item">⏱️ 3 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/work-life-boundary/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/work-life-boundary" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="skill-card-full ready">
+  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-content">
+    <div class="skill-title">
+      <span class="skill-icon">📚</span>
+      <h3>Reading Recommendations</h3>
+    </div>
+    <p class="skill-desc">Buchempfehlungen basierend auf gelesenen Büchern mit Genre/Theme Analysis und Jaccard Similarity</p>
+    
+    <div class="skill-meta">
+      <span class="meta-item">📦 melflin/reading-recommendations</span>
+      <span class="meta-item">⏱️ 5 Min Setup</span>
+    </div>
+
+    <div class="skill-actions">
+      <a href="./docs/skills/reading-recommendations/README.md" class="cta-button">Dokumentation</a>
+      <a href="https://github.com/Melflin/melflin.github.io/tree/master/skills/reading-recommendations" class="cta-button secondary">GitHub</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
 ---
 
 ## Installation
@@ -132,9 +174,13 @@ clawdhub install melflin/meeting-prep-assistant
 clawdhub install melflin/knowledge-sync
 clawdhub install melflin/podcast-notes
 clawdhub install melflin/family-calendar
+clawdhub install melflin/work-life-boundary
+clawdhub install melflin/reading-recommendations
 
 # Oder einzeln
 clawdhub install melflin/family-calendar
+clawdhub install melflin/work-life-boundary
+clawdhub install melflin/reading-recommendations
 ```
 
 [→ Zur Installation Guide](./installation.html)
@@ -178,12 +224,12 @@ clawdhub install melflin/family-calendar
 <div class="dev-stats">
 
 <div class="dev-stat">
-  <div class="dev-number">5</div>
+  <div class="dev-number">7</div>
   <div class="dev-label">Skills</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">5</div>
+  <div class="dev-number">7</div>
   <div class="dev-label">Fertig</div>
 </div>
 
@@ -194,13 +240,13 @@ clawdhub install melflin/family-calendar
 
 <div class="dev-stat">
   <div class="dev-number">🎯</div>
-  <div class="dev-label">Family Calendar</div>
+  <div class="dev-label">Weekly Priority</div>
 </div>
 
 </div>
 
 ---
 
-*5 Skills. Alle fertig.*
+*7 Skills. Alle fertig. Nächste Skill in Planung...*
 
 [→ 📸 Screenshots](./screenshots)

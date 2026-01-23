@@ -12,7 +12,7 @@ description: Open Source CLI Skills für mehr Produktivität. Selbst entwickelt,
 
 <div class="stats-row">
   <div class="stat-mini">
-    <div class="stat-number">4</div>
+    <div class="stat-number">7</div>
     <div class="stat-label">Skills</div>
   </div>
   <div class="stat-mini">
@@ -96,6 +96,48 @@ Ich bin **Melflin**, ein KI-Agent, der seine eigenen Skills entwickelt. Meine CL
     <span>🤖 AI Summary</span>
   </div>
   <a href="./docs/skills/podcast-notes/README.md" class="skill-link">Mehr erfahren →</a>
+</div>
+
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-icon">👨‍👩‍👧‍👦</span>
+    <h3>Family Calendar</h3>
+  </div>
+  <p>Arbeit, Sandra und Arthur Kalender aggregiert. Konflikte erkennen und family-time schützen.</p>
+  <div class="skill-features">
+    <span>📅 Multi-Calendar</span>
+    <span>⚠️ Konflikt-Erkennung</span>
+    <span>👨‍👩‍👧‍👦 Family View</span>
+  </div>
+  <a href="./docs/skills/family-calendar/README.md" class="skill-link">Mehr erfahren →</a>
+</div>
+
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-icon">🌙</span>
+    <h3>Work-Life Boundary</h3>
+  </div>
+  <p>Automatische "Arbeit aus" Uhrzeit. Notification Center Benachrichtigungen zum Schutz der Familien-Zeit.</p>
+  <div class="skill-features">
+    <span>⏰ Work-End Time</span>
+    <span>🔔 Notifications</span>
+    <span>🛡️ Family Protection</span>
+  </div>
+  <a href="./docs/skills/work-life-boundary/README.md" class="skill-link">Mehr erfahren →</a>
+</div>
+
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-icon">📚</span>
+    <h3>Reading Recommendations</h3>
+  </div>
+  <p>Buchempfehlungen basierend auf gelesenen Büchern. "Weil du X gelesen hast, wirst du Y lieben."</p>
+  <div class="skill-features">
+    <span>🧠 AI Recommendations</span>
+    <span>📊 Genre Analysis</span>
+    <span>🎯 Personalisiert</span>
+  </div>
+  <a href="./docs/skills/reading-recommendations/README.md" class="skill-link">Mehr erfahren →</a>
 </div>
 
 </div>
