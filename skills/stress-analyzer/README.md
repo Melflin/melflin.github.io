@@ -1,69 +1,59 @@
-# Stress Pattern Analyzer
+# 📊 Stress Pattern Analyzer
 
-*Analysiert Kalender, Arbeitszeiten und zeigt Stress-Level über Zeit als ASCII-Chart*
-
-## Was macht dieser Skill?
-
-Der Stress Pattern Analyzer hilft dir, deine Stress-Level objektiv zu verstehen. Er sammelt Daten aus deinem Apple Calendar, berücksichtigt deine Arbeitszeiten und zeigt dir in einem übersichtlichen ASCII-Chart, wie sich dein Stress über die Woche entwickelt.
+Live-Tracking deiner Stress-Level basierend auf Kalender, Arbeitszeiten und Benachrichtigungen.
 
 ## Features
 
-- ✅ **Calendar-Integration** - Nutzt accli für Apple Calendar
-- ✅ **Stress-Score Algorithmus** - Bewertet Termindichte, Arbeitszeit, Benachrichtigungen
-- ✅ **ASCII-Chart Visualisierung** - Klare Darstellung direkt im Terminal
-- ✅ **Wochenübersicht** - Sieh deine Stress-Muster auf einen Blick
-- ✅ **Konfigurierbar** - Passe Parameter an deine Situation an
+- **Stress-Score (0-100)**: Vier-Faktoren-Modell für präzise Analyse
+- **Wochenübersicht**: Historische Daten und Trends
+- **CLI-Interface**: Einfache Bedienung über Terminal
+- **Kalender-Integration**: Automatische Termindichte-Berechnung
+- **ASCII-Visualisierung**: Schnelle Übersicht ohne externe Abhängigkeiten
 
 ## Installation
 
 ```bash
-# Über ClawdHub (sobald veröffentlicht)
-clawdhub install melflin/stress-analyzer
-
-# Oder direkt
-npm install -g melflin-stress-analyzer
+cd /Users/melf/melflin/skills/stress-analyzer
+npm install
 ```
 
-## Usage
+## Verwendung
 
-### Analyse starten
-
+### Stress-Level analysieren
 ```bash
-# Basis-Analyse
-melflin-stress-analyzer analyze
+node index.js analyze
+node index.js a
+```
 
-# Mit eigenen Parametern
-melflin-stress-analyzer analyze --days 14 --work-hours 9 --notifications 50
+Mit Optionen:
+```bash
+node index.js analyze --days 14 --work-hours 10 --notifications 50
 ```
 
 ### Wochenübersicht
-
 ```bash
-melflin-stress-analyzer week
+node index.js week
+node index.js w
 ```
 
 ### Konfiguration
-
 ```bash
-# Standard-Arbeitsstunden setzen
-melflin-stress-analyzer config --set-work-hours 8
-
-# Geschätzte Benachrichtigungen/Tag setzen
-melflin-stress-analyzer config --set-notifications 30
+node index.js config --set-work-hours 8
+node index.js config --set-notifications 30
 ```
 
-## Stress-Score Erklärung
+## Stress-Score Algorithmus
 
-Der Stress-Score (0-100) setzt sich aus vier Faktoren zusammen:
+Der Score basiert auf 4 Faktoren (max. 100 Punkte):
 
-| Faktor | Max Punkte | Beschreibung |
-|--------|-----------|--------------|
-| Termindichte | 40 | Events pro Tag im Kalender |
+| Faktor | Max. Punkte | Beschreibung |
+|--------|-------------|--------------|
+| Termindichte | 40 | Events pro Tag über 7 Tage |
 | Arbeitszeit | 30 | Überschreitung von 8h/Tag |
-| Benachrichtigungen | 20 | Geschätzte Anzahl/Tag |
-| Kontinuität | 10 | Keine Pausen zwischen Events |
+| Benachrichtigungen | 20 | Volume an Push-Nachrichten |
+| Kontinuität | 10 | Durchgehende Belastung |
 
-### Bewertung
+### Score-Levels
 
 | Score | Level | Emoji |
 |-------|-------|-------|
@@ -72,50 +62,76 @@ Der Stress-Score (0-100) setzt sich aus vier Faktoren zusammen:
 | 51-75 | Belastet | 🟠 |
 | 76-100 | Kritisch | 🔴 |
 
-## Beispiel-Output
+## Visualisierung
 
+### ASCII Bar Chart
 ```
-📊 Stress Pattern Analyzer
+Stress-Level: ████████░░ 68/100 🟠 Belastet
 
-╔════════════════════════════════╗
-║  Aktueller Stress-Score: 052   ║
-║  🟡 Moderat                    ║
-╠════════════════════════════════╣
-║  Events (7 Tage): 24           ║
-║  Work Hours/Tag: 8.5           ║
-║  Notifications/Tag: 45         ║
-╚════════════════════════════════╝
-
-📈 Trend (letzte 7 Tage):
-100 │
- 90 │
- 80 │
- 70 │              ●
- 60 │        ●     │
- 50 │   ●     │     │
- 40 │   │     │     │
- 30 │   │     │     │
- 20 │   │     │     │
- 10 │   │     │     │
-  0 └─────────────────────
-     1  2  3  4  5  6  7
+Letzte 7 Tage:
+Mo ██████░░░░░░ 45
+Di ████████░░░░ 52
+Mi ████░░░░░░░░ 38
+Do █████████░░░ 61
+Fr █████████░░░ 55
+Sa ██████░░░░░░ 42
+So ██████░░░░░░ 38
 ```
 
-## Anforderungen
+### ASCII Trend Chart
+```
+100 │                                    
+ 75 │        ●         ●     ●           
+ 50 │   ●    │    ●    │     │           
+ 25 │   │    │    │    │     │     ●     
+  0 │   └────┴────┴────┴────┴────┴─────  
+      Mo  Di  Mi  Do  Fr  Sa  So
+```
 
-- macOS
-- Node.js 18+
-- [accli](https://www.npmjs.com/package/@joargp/accli) für Calendar-Zugriff
+## Dateien
 
-## Weiterführend
+```
+stress-analyzer/
+├── index.js          # Hauptanwendung
+├── SKILL.md          # Clawdbot Integration
+├── PROGRESS.md       # Entwicklungsfortschritt
+├── PLAN.md           # Projektplan
+└── README.md         # Diese Datei
+```
 
-- [PLAN.md](./PLAN.md) - Entwicklungskonzept
-- [PROGRESS.md](./PROGRESS.md) - Fortschritts-Tracking
+## Integration in Clawdbot
 
-## Lizenz
+Siehe `SKILL.md` für Details zur Nutzung in Clawdbot.
 
-MIT License
+## Entwicklungsfortschritt
+
+| Iteration | Status | Datum |
+|-----------|--------|-------|
+| 1 | ✅ Abgeschlossen | 23.01.2026 |
+| 2 | ✅ Abgeschlossen | 23.01.2026 |
+| 3 | ✅ Abgeschlossen | 23.01.2026 |
+| 4 | ✅ Abgeschlossen | 23.01.2026 |
+| 5 | ✅ Abgeschlossen | 23.01.2026 |
+
+## Todo
+
+- [x] Projekt-Struktur
+- [x] Stress-Score Algorithmus
+- [x] ASCII-Visualisierung
+- [x] README-Dokumentation
+- [x] Testing
+- [ ] SVG-Chart-Export
+- [ ] Historische Daten persistenz
+- [ ] Benachrichtigungen bei kritischem Stress
+
+## Screenshots
+
+### analyze command
+![Analyze Output](docs/screenshot-analyze.png)
+
+### week command  
+![Week Output](docs/screenshot-week.png)
 
 ---
 
-*Teil des Melflin OSS Projekts*
+*Entwickelt für das Melflin-Ökosystem | v1.0.0*

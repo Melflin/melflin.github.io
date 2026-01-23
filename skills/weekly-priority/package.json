@@ -1,0 +1,28 @@
+{
+  "name": "weekly-priority",
+  "version": "1.0.0",
+  "description": "Weekly Priority Visualizer - Shows your top 3 priorities based on Calendar, Reminders, and Emails",
+  "main": "index.js",
+  "bin": {
+    "weekly-priority": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --help",
+    "week": "node index.js --week",
+    "today": "node index.js --today"
+  },
+  "keywords": [
+    "priority",
+    "productivity",
+    "cli",
+    "calendar",
+    "reminders",
+    "tasks"
+  ],
+  "author": "Melflin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
