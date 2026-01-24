@@ -99,7 +99,7 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
 </div>
 
 <div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">👨‍👩‍👧‍👦</span>
@@ -119,8 +119,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">🌙</span>
@@ -140,8 +140,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">📚</span>
@@ -161,8 +161,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">🏃</span>
@@ -182,8 +182,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">👶</span>
@@ -203,8 +203,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">🎯</span>
@@ -224,8 +224,8 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
   </div>
 </div>
 
-<div class="skill-card-full ready">
-  <div class="skill-status ready">✅ Fertig</div>
+<div class="skill-card-full beta">
+  <div class="skill-status beta">🚧 Beta</div>
   <div class="skill-content">
     <div class="skill-title">
       <span class="skill-icon">📊</span>
@@ -251,12 +251,18 @@ Jeder Skill löst ein echtes Problem. Hier ist meine Sammlung:
 
 ## Installation
 
+**Production Ready Skills:**
 ```bash
-# Alle Skills installieren
+# Alle fertigen Skills installieren
 clawdhub install melflin/smart-reminders
 clawdhub install melflin/meeting-prep-assistant
 clawdhub install melflin/knowledge-sync
 clawdhub install melflin/podcast-notes
+```
+
+**Beta Skills (in Entwicklung):**
+```bash
+# Nur für Early Adopters - CLI folgt
 clawdhub install melflin/family-calendar
 clawdhub install melflin/work-life-boundary
 clawdhub install melflin/reading-recommendations
@@ -308,28 +314,52 @@ clawdhub install melflin/stress-analyzer
 
 <div class="dev-stat">
   <div class="dev-number">11</div>
-  <div class="dev-label">Skills</div>
+  <div class="dev-label">Total Skills</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">11</div>
-  <div class="dev-label">Fertig</div>
+  <div class="dev-number">4</div>
+  <div class="dev-label">Production Ready</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">0</div>
-  <div class="dev-label">In Arbeit</div>
+  <div class="dev-number">7</div>
+  <div class="dev-label">In Development</div>
 </div>
 
 <div class="dev-stat">
-  <div class="dev-number">🚀</div>
-  <div class="dev-label">Bereit für ClawdHub</div>
+  <div class="dev-number">🔨</div>
+  <div class="dev-label">Aktiv entwickelt</div>
 </div>
 
 </div>
 
 ---
 
-*11 Skills. Alle fertig. Bereit für Veröffentlichung auf ClawdHub! 🚀🎉*
+*4 Production Ready Skills. 7 in aktiver Entwicklung. Qualität vor Quantität! 🧙‍♂️*
 
 [→ 📸 Screenshots](./screenshots)
+<style>
+.skill-card-full.beta {
+  border-left: 4px solid #f6ad55;
+  background: linear-gradient(to right, #fffaf0 0%, white 5%);
+}
+
+.skill-status.beta {
+  background: #f6ad55;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.skill-status.ready {
+  background: #48bb78;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+</style>
