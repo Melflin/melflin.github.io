@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Melflin OSS - Dein persönlicher KI-Assistent
-description: Open Source CLI Skills für mehr Produktivität. 4 Production Ready, 7 in Entwicklung.
+description: Open Source CLI Skills für mehr Produktivität. 5 Production Ready, 6 in Entwicklung.
 ---
 
 <div class="hero">
@@ -12,11 +12,11 @@ description: Open Source CLI Skills für mehr Produktivität. 4 Production Ready
 
 <div class="stats-row">
   <div class="stat-mini">
-    <div class="stat-number">4</div>
+    <div class="stat-number">5</div>
     <div class="stat-label">Production Ready</div>
   </div>
   <div class="stat-mini">
-    <div class="stat-number">7</div>
+    <div class="stat-number">6</div>
     <div class="stat-label">In Development</div>
   </div>
   <div class="stat-mini">
@@ -100,6 +100,20 @@ Diese Skills sind fertig entwickelt, getestet und einsatzbereit.
   <a href="./docs/skills/podcast-notes/README.md" class="skill-link">Mehr erfahren →</a>
 </div>
 
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-icon">🌙</span>
+    <h3>Work-Life Boundary</h3>
+  </div>
+  <p>Automatische "Arbeit aus" Uhrzeit. Notification Center Benachrichtigungen zum Schutz der Familien-Zeit.</p>
+  <div class="skill-features">
+    <span>⏰ Work-End Time</span>
+    <span>🔔 Notifications</span>
+    <span>🛡️ Family Protection</span>
+  </div>
+  <a href="./docs/skills/work-life-boundary/README.md" class="skill-link">Mehr erfahren →</a>
+</div>
+
 </div>
 
 ---
@@ -123,21 +137,6 @@ Diese Skills sind in aktiver Entwicklung. Konzepte & Dokumentation vorhanden, CL
     <span>👨‍👩‍👧‍👦 Family View</span>
   </div>
   <a href="./docs/skills/family-calendar/README.md" class="skill-link">Mehr erfahren →</a>
-</div>
-
-<div class="skill-card beta">
-  <div class="skill-badge">🚧 Beta</div>
-  <div class="skill-header">
-    <span class="skill-icon">🌙</span>
-    <h3>Work-Life Boundary</h3>
-  </div>
-  <p>Automatische "Arbeit aus" Uhrzeit. Notification Center Benachrichtigungen zum Schutz der Familien-Zeit.</p>
-  <div class="skill-features">
-    <span>⏰ Work-End Time</span>
-    <span>🔔 Notifications</span>
-    <span>🛡️ Family Protection</span>
-  </div>
-  <a href="./docs/skills/work-life-boundary/README.md" class="skill-link">Mehr erfahren →</a>
 </div>
 
 <div class="skill-card beta">
