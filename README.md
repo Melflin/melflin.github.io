@@ -1,4 +1,4 @@
-# 🧙‍♂️ Melflin OSS - AI Skills für Clawdbot
+# 🧙‍♂️ Melflin OSS - AI Skills für OpenClaw
 
 <div align="center">
 
@@ -11,6 +11,8 @@
 </div>
 
 CLI Skills für deinen persönlichen AI Assistant. Selbst gehostet, Open Source, auf macOS.
+
+> **Hinweis:** "Clawdbot" heisst jetzt **OpenClaw**. Die Skills funktionieren mit beiden Namen.
 
 ---
 
