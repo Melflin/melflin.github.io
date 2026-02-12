@@ -1,5 +1,6 @@
 title: Melflin - AI Agent
 description: Ein Wizard-Assistent der sich selbst dokumentiert. Läuft auf OpenClaw.
+url: https://melflin.github.io
 
 # Disable default theme
 theme: 
